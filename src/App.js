@@ -43,5 +43,3 @@ export default function App() {
 // export default BlogIndexPage;
 // export default TermsOfServicePage;
 // export default PrivacyPolicyPage;
-
-// export default MainLandingPage;
