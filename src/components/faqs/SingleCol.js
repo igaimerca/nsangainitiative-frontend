@@ -45,33 +45,33 @@ export default ({
     {
       question: "Educational Program",
       answer:
-        "Our educational program offers a comprehensive learning experience for students. It encompasses various subjects, encourages critical thinking, fosters creativity, and prepares individuals for future challenges. The curriculum is designed to empower students with knowledge, skills, and a thirst for lifelong learning. Join our educational program today!",
+        "Our educational program offers a comprehensive learning experience for students. It encompasses various subjects, encourages critical thinking, fosters creativity, and prepares individuals for future challenges. The curriculum is designed to empower students with knowledge, skills, and a thirst for lifelong learning.",
     },
     {
       question: "Child protection and well being",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "At NSANGA Initiative, child protection and well-being are paramount. We dedicate ourselves to ensuring the safety, security, and happiness of every child we serve. Our main activities revolve around creating a nurturing environment, advocating for their rights, and providing comprehensive support for their physical and emotional well-being.",
     },
     {
       question:
         "Adolescents and young women Sexual Reproductive Health & Rights",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "One of our main activities involves promoting the Sexual Reproductive Health & Rights of adolescents and young women. We prioritize empowering them with comprehensive education, access to healthcare services, and advocating for their rights to ensure a healthier future for all.",
     },
     {
       question: "Psycho-Social Support",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Providing essential guidance, empathy, and assistance to individuals facing emotional challenges. Our dedicated team offers comprehensive services, including counseling, therapy, and community resources, ensuring holistic support for those in need.",
     },
     {
-      question: "Adolescent girls and young women’s empowerment program",
+      question: "Adolescent girls and young women's empowerment program",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Through this initiative, we aim to uplift and support the younger generation, providing them with resources, mentorship, and opportunities for growth. Together, we strive to create a brighter future for all.",
     },
     {
       question: "Fighting malnutrition",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Fighting malnutrition stands as a cornerstone in our endeavors, aiming to nourish communities, empower individuals, and eradicate hunger's grip. Through innovative programs, partnerships, and sustainable practices, we strive to ensure healthy, balanced diets for all, leaving no one behind in the battle against malnutrition.",
     },
   ],
 }) => {

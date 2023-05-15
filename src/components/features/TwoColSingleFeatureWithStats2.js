@@ -50,7 +50,7 @@ const DecoratorBlob = styled(SvgDotPattern)((props) => [
 export default ({
   heading = (
     <>
-      <wbr /> <HighlightedText>ABOUT US</HighlightedText>
+      <wbr /> <HighlightedText>About Us</HighlightedText>
     </>
   ),
   description = "NSANGA Initiative is a Rwandan non-governmental organization. It has been established in 2022 and is registered at Rwanda Governance Board (RGB) with Operational Certificate number 1200/ RGB /NGO/OC/03/2023.",

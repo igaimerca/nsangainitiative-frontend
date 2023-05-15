@@ -1,10 +1,11 @@
 import React from "react";
 import tw from "twin.macro";
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js";
-import Hero from "../components/hero/BackgroundAsImage.js";
+import Header from "../components/headers/light.js";
 import Features from "../components/features/ThreeColSimple.js";
 import FAQ from "../components/faqs/SingleCol.js";
 import MainFeature1 from "../components/features/TwoColWithButton.js";
+import Hero from "../components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
 import Footer from "../components/footers/MiniCenteredFooter.js";
 
 import integrityIconImageSrc from "../images/integrity.png";
@@ -14,15 +15,17 @@ import accountabilityIconImageSrc from "../images/accountability.png";
 import passionIconImageSrc from "../images/passion.png";
 import VisionImageSrc from "../images/gallery/22.jpeg";
 import MissionImageSrc from "../images/gallery/11.jpeg";
+import gallery from "../images/gallery/index.js";
 
 const Home = () => {
   const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
-  const Subheading = tw.span`uppercase tracking-wider text-sm`;
 
   return (
     <AnimationRevealPage>
-      <Hero />
+      <Header />
+      <Hero textOnLeft={true} testimonials={gallery} />
       <MainFeature1
+        showSideDecorator={true}
         id="mission"
         heading={
           <>

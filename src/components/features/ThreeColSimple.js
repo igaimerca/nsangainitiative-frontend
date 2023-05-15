@@ -8,7 +8,6 @@ import {
 } from "../misc/Headings.js";
 import { SectionDescription } from "../misc/Typography.js";
 import { Container, ContentWithPaddingXl } from "../misc/Layouts.js";
-import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-icon.svg";
 import SupportIconImage from "../../images/support-icon.svg";
 import ShieldIconImage from "../../images/shield-icon.svg";
 import CustomizeIconImage from "../../images/customize-icon.svg";
