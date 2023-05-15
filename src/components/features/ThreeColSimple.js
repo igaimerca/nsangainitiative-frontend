@@ -54,6 +54,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 export default ({
+  id,
   cards = [
     {
       imageSrc: ShieldIconImage,
@@ -75,7 +76,6 @@ export default ({
       url: "https://reddit.com",
     },
   ],
-  linkText = "Learn More",
   heading = "",
   subheading = "",
   description = "",
@@ -90,7 +90,7 @@ export default ({
    *  4) url - the url that the card should goto on click
    */
   return (
-    <Container>
+    <Container id={id}>
       <ContentWithPaddingXl>
         {subheading && <Subheading>{subheading}</Subheading>}
         {heading && <Heading>{heading}</Heading>}
@@ -104,12 +104,6 @@ export default ({
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
               </Card>
             </Column>
           ))}

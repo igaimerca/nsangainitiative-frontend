@@ -1,70 +1,96 @@
 import React from "react";
 import tw from "twin.macro";
-import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js";
-import TrackRecord from "../components/features/TwoColSingleFeatureWithStats2.js";
 import Hero from "../components/hero/BackgroundAsImage.js";
 import Features from "../components/features/ThreeColSimple.js";
-import TabGrid from "../components/cards/TabCardGrid.js";
 import FAQ from "../components/faqs/SingleCol.js";
-import Testimonial from "../components/testimonials/ThreeColumnWithProfileImage.js";
+import MainFeature1 from "../components/features/TwoColWithButton.js";
 import Footer from "../components/footers/MiniCenteredFooter.js";
 
-import chefIconImageSrc from "../images/chef-icon.svg";
-import celebrationIconImageSrc from "../images/celebration-icon.svg";
-import shopIconImageSrc from "../images/shop-icon.svg";
+import integrityIconImageSrc from "../images/integrity.png";
+import humanityIconImageSrc from "../images/humanity.png";
+import transparencyIconImageSrc from "../images/transparency.png";
+import accountabilityIconImageSrc from "../images/accountability.png";
+import passionIconImageSrc from "../images/passion.png";
+import VisionImageSrc from "../images/gallery/22.jpeg";
+import MissionImageSrc from "../images/gallery/11.jpeg";
 
 const Home = () => {
   const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const Subheading = tw.span`uppercase tracking-wider text-sm`;
+
   return (
     <AnimationRevealPage>
       <Hero />
-      <TrackRecord />
-      <TabGrid
+      <MainFeature1
+        id="mission"
         heading={
           <>
-            Checkout our <HighlightedText>works.</HighlightedText>
+            OUR <HighlightedText>MISSION</HighlightedText>
           </>
         }
+        description="To support, protect and advocate for children, youth, adolescent girls and young women’s rights and works to improve their lives through education, counseling, capacity building, socio-economic empowerment and advocacy to ensure a healthy and purposeful life."
+        buttonRounded={false}
+        imageSrc={MissionImageSrc}
+        textOnLeft={true}
+        imageDecoratorBlob={true}
       />
-      <Features
+      <MainFeature1
+        id="vision"
         heading={
           <>
-            Amazing <HighlightedText>Services.</HighlightedText>
+            OUR <HighlightedText>VISION</HighlightedText>
+          </>
+        }
+        description="A society where children, youth, adolescent and young women have a health, purposeful and dignified lives, actively engaged in communities and economically empowered."
+        buttonRounded={false}
+        imageSrc={VisionImageSrc}
+        imageDecoratorBlob={true}
+        textOnLeft={false}
+      />
+      <Features
+        id="values"
+        heading={
+          <>
+            OUR <HighlightedText>VALUES</HighlightedText>
           </>
         }
         cards={[
           {
-            imageSrc: shopIconImageSrc,
-            title: "Lorem ipsum ",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://google.com",
+            imageSrc: passionIconImageSrc,
+            title: "Passion",
+            description:
+              "Passion drives us to excel, innovate, and make a difference.",
           },
           {
-            imageSrc: chefIconImageSrc,
-            title: "Lorem ipsum",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://timerse.com",
+            imageSrc: transparencyIconImageSrc,
+            title: "Transparency",
+            description:
+              "Transparency is the cornerstone of our initiative, fostering trust and integrity.",
           },
           {
-            imageSrc: celebrationIconImageSrc,
-            title: "Lorem ipsum",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://reddit.com",
+            imageSrc: accountabilityIconImageSrc,
+            title: "Accountability",
+            description:
+              "Accountability fuels our initiative, driving us towards success and excellence.",
+          },
+          {
+            imageSrc: integrityIconImageSrc,
+            title: "Integrity",
+            description:
+              "Integrity is our compass, guiding us towards ethical decisions and actions.",
+          },
+          {
+            imageSrc: humanityIconImageSrc,
+            title: "Humanity",
+            description:
+              "Humanity, the beacon of compassion and unity, binds us all.",
           },
         ]}
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
       />
-      <Testimonial
-        subheading=""
-        heading={
-          <>
-            Customers <HighlightedText>Love Us.</HighlightedText>
-          </>
-        }
-      />
-      <FAQ />
+      <FAQ id="what_we_do" />
       <Footer />
     </AnimationRevealPage>
   );

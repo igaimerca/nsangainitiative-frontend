@@ -11,7 +11,7 @@ import Header, {
   NavToggle,
   DesktopNavLinks,
 } from "../headers/light.js";
-import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+import NavbarSlider from "../carousel/NavBarSlider.jsx";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
@@ -24,7 +24,7 @@ const StyledHeader = styled(Header)`
 `;
 const Container = styled.div`
   ${tw`relative min-h-screen -mx-8 -mt-8 bg-right bg-no-repeat bg-cover`}
-  background-image: url("https://images.unsplash.com/photo-1576014131795-d440191a8e8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+  background-image: url('https://images.unsplash.com/photo-1576014131795-d440191a8e8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
@@ -49,26 +49,16 @@ const SlantedBackground = styled.span`
   }
 `;
 
-const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-sm`;
-
-const PrimaryAction = tw.button`px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 text-primary-500 font-bold rounded shadow transition duration-300 hocus:bg-primary-500 hocus:text-gray-100 focus:shadow-outline`;
-
-const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
-  padding-bottom: 56.25% !important;
-  padding-top: 0px !important;
-  ${tw`rounded`}
-  iframe {
-    ${tw`bg-black rounded shadow-xl`}
-  }
-`;
+const PrimaryAction = tw.button`px-8 py-3 text-sm sm:text-base sm:mt-5 sm:px-8 sm:py-4 hocus:text-primary-500 font-bold rounded shadow transition duration-300 bg-primary-500 hocus:bg-gray-100 text-gray-100 focus:shadow-outline`;
 
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">About</NavLink>
-      <NavLink href="#">Our Work</NavLink>
-      <NavLink href="#">Our Services</NavLink>
-      <NavLink href="#">Contact</NavLink>
+      <NavLink href="#about">About us</NavLink>
+      <NavLink href="#mission">Mission</NavLink>
+      <NavLink href="#vision">Vision</NavLink>
+      <NavLink href="#values">Values</NavLink>
+      <NavLink href="#what_we_do">What we do</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">DONATE NOW</PrimaryLink>
@@ -80,25 +70,12 @@ export default () => {
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
-        <TwoColumn>
-          <LeftColumn>
-            <Notification>
-              We are currently operating in Kigali, Rwanda.
-            </Notification>
-            <Heading>
-              <span>You're welcome</span>
-              <br />
-              <SlantedBackground>Nsanga Initiave</SlantedBackground>
-            </Heading>
-            <PrimaryAction>Read Customer Stories</PrimaryAction>
-          </LeftColumn>
-          <RightColumn>
-            <StyledResponsiveVideoEmbed
-              url="https://www.youtube.com/watch?v=EEJBJGNmzkI"
-              background="transparent"
-            />
-          </RightColumn>
-        </TwoColumn>
+        {/* <NavbarSlider /> */}
+
+        {/* <Heading>
+          <SlantedBackground>NSANGA Initiative</SlantedBackground>
+        </Heading>
+        <PrimaryAction>DONATE NOW</PrimaryAction> */}
       </HeroContainer>
     </Container>
   );

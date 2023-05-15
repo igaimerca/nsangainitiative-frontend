@@ -36,10 +36,11 @@ export default () => {
             <LogoImg src={logo} />
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">About</Link>
-            <Link href="#">Our Work</Link>
-            <Link href="#">Our Services</Link>
-            <Link href="#">Contact</Link>
+            <Link href="#about">About us</Link>
+            <Link href="#mission">Mission</Link>
+            <Link href="#vision">Vision</Link>
+            <Link href="#values">Values</Link>
+            <Link href="#what_we_do">What we do</Link>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
@@ -53,7 +54,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2023, Nsanga Initiative. All Rights Reserved.
+            &copy; Copyright 2022, Nsanga Initiative. All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>
