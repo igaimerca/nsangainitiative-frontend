@@ -9,6 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo.jpg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import MegaMenu from "../menu/Mega.jsx";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -68,6 +69,7 @@ export default ({
       <NavLink href="#about">About us</NavLink>
       <NavLink href="#mission">Mission</NavLink>
       <NavLink href="#vision">Vision</NavLink>
+      {/* <MegaMenu>h</MegaMenu> */}
       <NavLink href="#values">Values</NavLink>
       <NavLink href="#what_we_do">What we do</NavLink>
     </NavLinks>,

@@ -13,8 +13,8 @@ import humanityIconImageSrc from "../images/humanity.png";
 import transparencyIconImageSrc from "../images/transparency.png";
 import accountabilityIconImageSrc from "../images/accountability.png";
 import passionIconImageSrc from "../images/passion.png";
-import VisionImageSrc from "../images/gallery/22.jpeg";
-import MissionImageSrc from "../images/gallery/11.jpeg";
+import VisionImageSrc from "../images/gallery/b.jpeg";
+import MissionImageSrc from "../images/gallery/a.jpeg";
 import gallery from "../images/gallery/index.js";
 
 const Home = () => {
@@ -50,6 +50,7 @@ const Home = () => {
         imageSrc={VisionImageSrc}
         imageDecoratorBlob={true}
         textOnLeft={false}
+        grayBg={true}
       />
       <Features
         id="values"

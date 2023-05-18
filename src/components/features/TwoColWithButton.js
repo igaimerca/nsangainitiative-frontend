@@ -58,6 +58,7 @@ export default ({
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
   textOnLeft = true,
+  className,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 

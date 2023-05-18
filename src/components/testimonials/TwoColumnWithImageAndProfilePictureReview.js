@@ -51,7 +51,7 @@ export const PrimaryLink = styled.button`
   ${tw`px-8 py-3 font-bold text-gray-100 border-b-0 rounded-md lg:mx-0 bg-primary-500 hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline`}
 `;
 
-const Subheading = tw(SubheadingBase)`mb-4`;
+const Subheading = tw(SubheadingBase)`mb-4 text-red-500`;
 const HeadingTitle = tw(SectionHeading)`text-white lg:text-left leading-tight`;
 const Description = tw.p`text-white mb-4 max-w-md text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4`;
 
@@ -100,7 +100,7 @@ export default ({
                 slidesToShow={1}
                 slidesToScroll={1}
                 autoplay={true}
-                autoplaySpeed={0}
+                // autoplaySpeed={0}
                 speed={3000}
                 arrows={false}
                 ref={setImageSliderRef}
@@ -115,6 +115,7 @@ export default ({
                     <TextContainer textOnLeft={textOnLeft}>
                       <HeadingInfo
                         tw="hidden lg:block"
+                        subheading={testimonial?.subTitle}
                         heading={testimonial.title}
                         description={testimonial.description}
                       />

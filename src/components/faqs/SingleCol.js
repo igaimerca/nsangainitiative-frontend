@@ -57,7 +57,7 @@ export default ({
     {
       question: "Child protection and well being",
       answer:
-        "At NSANGA Initiative, child protection and well-being are paramount. We dedicate ourselves to ensuring the safety, security, and happiness of every child we serve. Our main activities revolve around creating a nurturing environment, advocating for their rights, and providing comprehensive support for their physical and emotional well-being.",
+        "Child protection and well-being are paramount. We dedicate ourselves to ensuring the safety, security, and happiness of every child we serve. Our main activities revolve around creating a nurturing environment, advocating for their rights, and providing comprehensive support for their physical and emotional well-being.",
     },
     {
       question:
