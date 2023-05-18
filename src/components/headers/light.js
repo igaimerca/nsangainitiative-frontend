@@ -122,7 +122,7 @@ export default ({
           </MegaMenu>
         )}
       </NavLink>
-      <NavLink href="#our_impact">CONTACT US</NavLink>
+      <NavLink href="#footer">CONTACT US</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">DONATE NOW</PrimaryLink>
