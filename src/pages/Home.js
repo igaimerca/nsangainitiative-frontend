@@ -18,8 +18,8 @@ import MissionImageSrc from "../images/gallery/11.jpeg";
 import gallery from "../images/gallery/index.js";
 
 const Home = () => {
-  const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
-
+  const HighlightedText = tw.span`bg-nsanga-blue text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const RedText = tw.span`text-nsanga-red`;
   return (
     <AnimationRevealPage>
       <Header />
@@ -29,7 +29,7 @@ const Home = () => {
         id="mission"
         heading={
           <>
-            OUR <HighlightedText>MISSION</HighlightedText>
+            <RedText>OUR</RedText> <HighlightedText>MISSION</HighlightedText>
           </>
         }
         description="To support, protect and advocate for children, youth, adolescent girls and young women’s rights and works to improve their lives through education, counseling, capacity building, socio-economic empowerment and advocacy to ensure a healthy and purposeful life."
@@ -42,7 +42,7 @@ const Home = () => {
         id="vision"
         heading={
           <>
-            OUR <HighlightedText>VISION</HighlightedText>
+            <RedText>OUR</RedText> <HighlightedText>VISION</HighlightedText>
           </>
         }
         description="A society where children, youth, adolescent and young women have a health, purposeful and dignified lives, actively engaged in communities and economically empowered."
@@ -55,7 +55,7 @@ const Home = () => {
         id="values"
         heading={
           <>
-            OUR <HighlightedText>VALUES</HighlightedText>
+            <RedText>OUR</RedText> <HighlightedText>VALUES</HighlightedText>
           </>
         }
         cards={[

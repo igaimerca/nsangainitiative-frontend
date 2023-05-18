@@ -37,9 +37,16 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
   ${tw`absolute bottom-0 left-0 w-64 h-64 transform pointer-events-none -z-20 opacity-15 -translate-x-2/3 text-primary-500`}
 `;
 
+const HighlightedText = tw.span`bg-nsanga-blue text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const RedText = tw.span`text-nsanga-red`;
+
 export default ({
   id,
-  heading = "WHAT WE DO?",
+  heading = (
+    <>
+      <RedText>WHAT</RedText> <HighlightedText>WE DO?</HighlightedText>
+    </>
+  ),
   description = "What we do shapes our future and defines who we are.",
   faqs = [
     {

@@ -15,6 +15,8 @@ module.exports = {
 
       black: "#000",
       white: "#fff",
+      "nsanga-red": "#bc3335",
+      "nsanga-blue": "#04538F",
 
       primary: {
         100: "#1d2d3b",

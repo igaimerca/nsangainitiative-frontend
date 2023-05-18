@@ -18,37 +18,45 @@ import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-
 import "slick-carousel/slick/slick.css";
 
 const Container = tw.div`relative`;
-const Content = tw.div`max-w-screen-xl mx-auto py-12`;
+const Content = tw.div`mx-auto py-2`;
 const TestimonialsContainer = tw.div`lg:mt-0`;
 const Testimonials = styled.div``;
-const Testimonial = tw.div`max-w-md lg:max-w-none mx-auto lg:mx-0 flex flex-col items-center lg:items-stretch lg:flex-row`;
+const Testimonial = tw.div`w-full lg:mx-0 flex flex-col items-center lg:items-stretch lg:flex-row`;
 
-const TestimonialImageSlider = tw(Slider)`w-full lg:w-6/12 flex-shrink-0 `;
+const TestimonialImageSlider = tw(Slider)`w-full flex-shrink-0 `;
 
 const ImageAndControlContainer = tw.div`relative outline-none`;
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-cover bg-no-repeat bg-center h-80 sm:h-96 lg:h-144`,
+  tw`relative bg-center bg-no-repeat bg-cover h-[86vh]`,
 ]);
 
-const ControlContainer = tw.div`absolute bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-tl-3xl border`;
+const ImageOverlay = styled.div`
+  ${tw`absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-[60%]`}
+`;
+
+const ControlContainer = tw.div`z-50 absolute bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-tl-3xl border`;
 const ControlButton = styled(PrimaryButton)`
-  ${tw`mx-3 rounded-full text-gray-100 p-2`}
+  ${tw`p-2 mx-3 text-gray-100 rounded-full`}
   svg {
     ${tw`w-5 h-5`}
   }
 `;
 
 const TextContainer = styled.div((props) => [
-  tw`flex flex-col items-center justify-center w-full lg:w-7/12`,
+  tw`absolute z-50 flex flex-col items-center justify-center w-full left-[10%] top-1/2 lg:w-7/12`,
   props.textOnLeft ? tw`lg:pr-12 lg:order-first` : tw`lg:pl-12 lg:order-last`,
 ]);
+export const PrimaryLink = styled.button`
+  ${tw`px-8 py-3 font-bold text-gray-100 border-b-0 rounded-md lg:mx-0 bg-primary-500 hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline`}
+`;
 
 const Subheading = tw(SubheadingBase)`mb-4`;
-const HeadingTitle = tw(SectionHeading)`lg:text-left leading-tight`;
-const Description = tw.p`mb-4 max-w-md text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-secondary-100`;
+const HeadingTitle = tw(SectionHeading)`text-white lg:text-left leading-tight`;
+const Description = tw.p`text-white mb-4 max-w-md text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4`;
 
-const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const HighlightedText = tw.span`bg-nsanga-blue text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const RedText = tw.span`text-red-500`;
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1
@@ -61,10 +69,10 @@ export default ({
   subheading = "",
   heading = (
     <>
-      WE ARE <br /> <HighlightedText>NSANGA</HighlightedText> Initiative
+      <RedText>OUR</RedText> <HighlightedText>MISSION</HighlightedText>
     </>
   ),
-  description = "A Rwandan non-governmental organization. It has been established in 2022 and is registered at Rwanda Governance Board (RGB) with Operational Certificate number 1200/ RGB /NGO/OC/03/2023.",
+  description = "To support, protect and advocate for children, youth, adolescent girls and young women’s rights and works to improve their lives through education, counseling, capacity building, socio-economic empowerment and advocacy to ensure a healthy and purposeful life.",
   testimonials = [
     {
       imageSrc:
@@ -84,17 +92,16 @@ export default ({
   return (
     <Container>
       <Content>
-        <HeadingInfo
-          tw="text-center lg:hidden"
-          subheading={subheading}
-          heading={heading}
-          description={description}
-        />
         <TestimonialsContainer>
           <Testimonials>
             <Testimonial>
               <TestimonialImageSlider
+                infinite={true}
+                slidesToShow={1}
+                slidesToScroll={1}
                 autoplay={true}
+                autoplaySpeed={0}
+                speed={3000}
                 arrows={false}
                 ref={setImageSliderRef}
                 asNavFor={textSliderRef}
@@ -102,7 +109,16 @@ export default ({
               >
                 {testimonials.map((testimonial, index) => (
                   <ImageAndControlContainer key={index}>
-                    <Image imageSrc={testimonial.imageSrc} />
+                    <Image imageSrc={testimonial.imageSrc}>
+                      <ImageOverlay />
+                    </Image>
+                    <TextContainer textOnLeft={textOnLeft}>
+                      <HeadingInfo
+                        tw="hidden lg:block"
+                        heading={testimonial.title}
+                        description={testimonial.description}
+                      />
+                    </TextContainer>
                     <ControlContainer>
                       <ControlButton onClick={imageSliderRef?.slickPrev}>
                         <ChevronLeftIcon />
@@ -114,20 +130,12 @@ export default ({
                   </ImageAndControlContainer>
                 ))}
               </TestimonialImageSlider>
-              <TextContainer textOnLeft={textOnLeft}>
-                <HeadingInfo
-                  tw="hidden lg:block"
-                  subheading={subheading}
-                  heading={heading}
-                  description={description}
-                />
-              </TextContainer>
             </Testimonial>
           </Testimonials>
         </TestimonialsContainer>
       </Content>
-      <DecoratorBlob1 />
-      <DecoratorBlob2 />
+      {/* <DecoratorBlob1 />
+      <DecoratorBlob2 /> */}
     </Container>
   );
 };
@@ -137,5 +145,6 @@ const HeadingInfo = ({ subheading, heading, description, ...props }) => (
     {subheading ? <Subheading>{subheading}</Subheading> : null}
     <HeadingTitle>{heading}</HeadingTitle>
     <Description>{description}</Description>
+    <PrimaryLink>DONATE NOW</PrimaryLink>
   </div>
 );

@@ -2,12 +2,12 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { Container as ContainerBase } from "../misc/Layouts.js";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo-white.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
-const Container = tw(ContainerBase)`bg-primary-900 text-gray-100 -mx-8 -mb-8`;
+const Container = tw(ContainerBase)`bg-nsanga-blue text-gray-100 -mx-8 -mb-8`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`;
