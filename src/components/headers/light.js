@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -9,11 +9,10 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo.jpg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-import MegaMenu from "../menu/Mega.jsx";
 
 const Header = tw.header`
   flex justify-between items-center
-  max-w-screen-xl max-h-[13vh] p-4 mx-auto
+  max-w-screen-xl max-h-[13vh] pt-0 p-4 mx-auto
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -22,10 +21,11 @@ export const NavLinks = tw.div`inline-block`;
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 export const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-  font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  py-0 md:py-[3rem] px-2 relative text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  font-semibold tracking-wide transition duration-300 hocus:text-primary-500
 `;
+
+export const List = tw.ul`flex flex-col gap-2 justify-start items-center`;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
@@ -43,6 +43,7 @@ export const LogoLink = styled(NavLink)`
 `;
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
+export const MegaMenu = tw.div`bg-white shadow-lg rounded-sm absolute top-[87%] md:top-[60%] -left-[2rem] w-[160px] z-50 px-2 py-3`;
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
@@ -64,14 +65,64 @@ export default ({
   className,
   collapseBreakpointClass = "lg",
 }) => {
+  const [activeMenu, setActiveMenu] = useState("");
+
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="#about">About us</NavLink>
-      <NavLink href="#mission">Mission</NavLink>
-      <NavLink href="#vision">Vision</NavLink>
-      {/* <MegaMenu>h</MegaMenu> */}
-      <NavLink href="#values">Values</NavLink>
-      <NavLink href="#what_we_do">What we do</NavLink>
+      <NavLink
+        onMouseEnter={() => setActiveMenu("who_we_are")}
+        onMouseLeave={() =>
+          setTimeout(() => {
+            setActiveMenu("");
+          }, 500)
+        }
+        href="#who_we_are"
+      >
+        WHO WE ARE
+        {activeMenu === "who_we_are" && (
+          <MegaMenu
+            onMouseLeave={() =>
+              setTimeout(() => {
+                setActiveMenu("");
+              }, 500)
+            }
+          >
+            <List>
+              <a href="#mission">Mission</a>
+              <a href="#mission">Vision</a>
+            </List>
+          </MegaMenu>
+        )}
+      </NavLink>
+      <NavLink href="#what_we_do">WHAT WE DO</NavLink>
+      <NavLink href="#our_impact">OUR IMPACT</NavLink>
+      <NavLink
+        onMouseEnter={() => setActiveMenu("media")}
+        onMouseLeave={() =>
+          setTimeout(() => {
+            setActiveMenu("");
+          }, 500)
+        }
+        href="#media"
+      >
+        MEDIA
+        {activeMenu === "media" && (
+          <MegaMenu
+            onMouseLeave={() =>
+              setTimeout(() => {
+                setActiveMenu("");
+              }, 500)
+            }
+          >
+            <List>
+              <a href="#announcementsS">Announcements</a>
+              <a href="#reports">Reports</a>
+              <a href="#events">Events</a>
+            </List>
+          </MegaMenu>
+        )}
+      </NavLink>
+      <NavLink href="#our_impact">CONTACT US</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">DONATE NOW</PrimaryLink>
