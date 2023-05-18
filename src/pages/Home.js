@@ -4,9 +4,9 @@ import AnimationRevealPage from "../helpers/AnimationRevealPage.js";
 import Header from "../components/headers/light.js";
 import Features from "../components/features/ThreeColSimple.js";
 import FAQ from "../components/faqs/SingleCol.js";
-import MainFeature1 from "../components/features/TwoColWithButton.js";
+import MainFeature from "../components/features/TwoColWithButton.js";
 import Hero from "../components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
-import Footer from "../components/footers/MiniCenteredFooter.js";
+import Footer from "../components/footers/FiveColumnDark.js";
 
 import integrityIconImageSrc from "../images/integrity.png";
 import humanityIconImageSrc from "../images/humanity.png";
@@ -24,7 +24,7 @@ const Home = () => {
     <AnimationRevealPage>
       <Header />
       <Hero textOnLeft={true} testimonials={gallery} />
-      <MainFeature1
+      <MainFeature
         showSideDecorator={true}
         id="mission"
         heading={
@@ -38,7 +38,7 @@ const Home = () => {
         textOnLeft={true}
         imageDecoratorBlob={true}
       />
-      <MainFeature1
+      <MainFeature
         id="vision"
         heading={
           <>

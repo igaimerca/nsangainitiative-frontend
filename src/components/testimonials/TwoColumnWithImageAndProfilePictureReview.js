@@ -44,7 +44,7 @@ const ControlButton = styled(PrimaryButton)`
 `;
 
 const TextContainer = styled.div((props) => [
-  tw`absolute z-50 flex flex-col items-center justify-center w-full left-[10%] top-1/2 lg:w-7/12`,
+  tw`absolute z-50 flex flex-col items-center justify-center w-[75%] left-[10%] top-[25%] md:top-1/2 lg:w-7/12`,
   props.textOnLeft ? tw`lg:pr-12 lg:order-first` : tw`lg:pl-12 lg:order-last`,
 ]);
 export const PrimaryLink = styled.button`
@@ -114,7 +114,7 @@ export default ({
                     </Image>
                     <TextContainer textOnLeft={textOnLeft}>
                       <HeadingInfo
-                        tw="hidden lg:block"
+                        tw="flex justify-center items-center flex-col md:block"
                         subheading={testimonial?.subTitle}
                         heading={testimonial.title}
                         description={testimonial.description}

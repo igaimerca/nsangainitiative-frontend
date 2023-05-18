@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import LogoImage from "../../images/logo.svg";
+import LogoImage from "../../images/logo.jpg";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
@@ -12,7 +12,9 @@ const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
 const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
 
 const Column = tw.div`md:w-1/5`;
-const WideColumn = tw(Column)`text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0`;
+const WideColumn = tw(
+  Column
+)`text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0`;
 
 const ColumnHeading = tw.h5`font-bold`;
 
@@ -44,7 +46,8 @@ export default () => {
             <LogoText>Treact Inc.</LogoText>
           </LogoContainer>
           <CompanyDescription>
-            Treact is an Internet Technology company providing design resources such as website templates and themes.
+            Treact is an Internet Technology company providing design resources
+            such as website templates and themes.
           </CompanyDescription>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
