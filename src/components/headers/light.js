@@ -70,7 +70,7 @@ export default ({
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink
-        onMouseEnter={() => setActiveMenu("who_we_are")}
+        onMouseOver={() => setActiveMenu("who_we_are")}
         onMouseLeave={() =>
           setTimeout(() => {
             setActiveMenu("");
@@ -80,13 +80,7 @@ export default ({
       >
         WHO WE ARE
         {activeMenu === "who_we_are" && (
-          <MegaMenu
-            onMouseLeave={() =>
-              setTimeout(() => {
-                setActiveMenu("");
-              }, 500)
-            }
-          >
+          <MegaMenu>
             <List>
               <a href="#mission">Mission</a>
               <a href="#mission">Vision</a>
@@ -97,7 +91,7 @@ export default ({
       <NavLink href="#what_we_do">WHAT WE DO</NavLink>
       <NavLink href="#our_impact">OUR IMPACT</NavLink>
       <NavLink
-        onMouseEnter={() => setActiveMenu("media")}
+        onMouseOver={() => setActiveMenu("media")}
         onMouseLeave={() =>
           setTimeout(() => {
             setActiveMenu("");
@@ -107,13 +101,7 @@ export default ({
       >
         MEDIA
         {activeMenu === "media" && (
-          <MegaMenu
-            onMouseLeave={() =>
-              setTimeout(() => {
-                setActiveMenu("");
-              }, 500)
-            }
-          >
+          <MegaMenu>
             <List>
               <a href="#announcementsS">Announcements</a>
               <a href="#reports">Reports</a>
