@@ -13,8 +13,9 @@ import humanityIconImageSrc from "../images/humanity.png";
 import transparencyIconImageSrc from "../images/transparency.png";
 import accountabilityIconImageSrc from "../images/accountability.png";
 import passionIconImageSrc from "../images/passion.png";
-import VisionImageSrc from "../images/gallery/b.jpeg";
-import MissionImageSrc from "../images/gallery/a.jpeg";
+import VisionImageSrc from "../images/gallery/e.jpeg";
+import MissionImageSrc from "../images/gallery/b.jpeg";
+import AboutImageSrc from "../images/gallery/a.jpeg";
 import gallery from "../images/gallery/index.js";
 
 const Home = () => {
@@ -26,6 +27,21 @@ const Home = () => {
       <Hero textOnLeft={true} testimonials={gallery} />
       <MainFeature
         showSideDecorator={true}
+        id="who_we_are"
+        subHeading="WHO WE ARE"
+        heading={
+          <>
+            <RedText>WHO</RedText> <HighlightedText>WE ARE</HighlightedText>
+          </>
+        }
+        description="A Rwandan non-governmental organization. It has been established in 2022 and is registered at Rwanda Governance Board (RGB) with Operational Certificate number 1200/ RGB /NGO/OC/03/2023."
+        buttonRounded={false}
+        imageSrc={AboutImageSrc}
+        textOnLeft={true}
+        imageDecoratorBlob={true}
+      />
+      <MainFeature
+        showSideDecorator={true}
         id="mission"
         heading={
           <>
@@ -35,7 +51,7 @@ const Home = () => {
         description="To support, protect and advocate for children, youth, adolescent girls and young women’s rights and works to improve their lives through education, counseling, capacity building, socio-economic empowerment and advocacy to ensure a healthy and purposeful life."
         buttonRounded={false}
         imageSrc={MissionImageSrc}
-        textOnLeft={true}
+        textOnLeft={false}
         imageDecoratorBlob={true}
       />
       <MainFeature
@@ -49,7 +65,7 @@ const Home = () => {
         buttonRounded={false}
         imageSrc={VisionImageSrc}
         imageDecoratorBlob={true}
-        textOnLeft={false}
+        textOnLeft={true}
         grayBg={true}
       />
       <Features

@@ -44,7 +44,7 @@ const ControlButton = styled(PrimaryButton)`
 `;
 
 const TextContainer = styled.div((props) => [
-  tw`absolute z-50 flex flex-col items-center md:items-start justify-center w-[75%] left-[10%] top-[17%] md:top-[45%] lg:w-8/12`,
+  tw`absolute z-50 flex flex-col items-center md:items-start justify-center w-[75%] left-[10%] top-[17%] md:top-[35%] lg:w-8/12`,
   props.textOnLeft ? tw`lg:pr-12 lg:order-first` : tw`lg:pl-12 lg:order-last`,
 ]);
 export const PrimaryLink = styled.a`

@@ -19,6 +19,8 @@ const gallery = [
     title: "NSANGA Initiative",
     description:
       "A Rwandan non-governmental organization. It has been established in 2022 and is registered at Rwanda Governance Board (RGB) with Operational Certificate number 1200/ RGB /NGO/OC/03/2023.",
+    button: "READ MORE",
+    link: "#who_we_are",
   },
   {
     imageSrc: Image1,
