@@ -19,12 +19,12 @@ const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl tex
 const Paragraph = tw.p`my-5 lg:my-8 text-base xl:text-lg`;
 
 const Actions = styled.div`
-  ${tw`relative max-w-md text-center mx-auto lg:mx-0`}
+  ${tw`relative max-w-md mx-auto text-center lg:mx-0`}
   input {
-    ${tw`sm:pr-48 pl-8 py-4 sm:py-5 rounded-full border-2 w-full font-medium focus:outline-none transition duration-300  focus:border-primary-500 hover:border-gray-500`}
+    ${tw`w-full py-4 pl-8 font-medium transition duration-300 border-2 rounded-full sm:pr-48 sm:py-5 focus:outline-none focus:border-primary-500 hover:border-gray-500`}
   }
   button {
-    ${tw`w-full sm:absolute right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none hover:bg-primary-900 transition duration-300`}
+    ${tw`top-0 bottom-0 right-0 flex items-center justify-center w-full py-4 my-4 mr-2 font-bold text-gray-100 transition duration-300 rounded-full sm:absolute bg-primary-500 sm:my-2 sm:w-40 sm:leading-none focus:outline-none hover:bg-primary-900`}
   }
 `;
 
@@ -32,16 +32,16 @@ const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-ce
 
 // Random Decorator Blobs (shapes that you see in background)
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
+  ${tw`absolute bottom-0 left-0 w-64 h-64 transform pointer-events-none opacity-5 -translate-x-2/3 -z-10`}
 `;
 
 const CustomersLogoStrip = styled.div`
   ${tw`mt-12 lg:mt-20`}
   p {
-    ${tw`uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500`}
+    ${tw`text-sm font-bold tracking-wider text-gray-500 uppercase lg:text-xs`}
   }
   img {
-    ${tw`mt-4 w-full lg:pr-16 xl:pr-32 opacity-50`}
+    ${tw`w-full mt-4 opacity-50 lg:pr-16 xl:pr-32`}
   }
 `;
 
@@ -53,11 +53,12 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Beautiful React Templates <span tw="text-primary-500">for you.</span>
+              Beautiful React Templates{" "}
+              <span tw="text-primary-500">for you.</span>
             </Heading>
             <Paragraph>
-              Our templates are easy to setup, understand and customize. Fully modular components with a variety of
-              pages and components.
+              Our templates are easy to setup, understand and customize. Fully
+              modular components with a variety of pages and components.
             </Paragraph>
             <Actions>
               <input type="text" placeholder="Your E-mail Address" />
@@ -65,12 +66,16 @@ export default ({ roundedHeaderButton }) => {
             </Actions>
             <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
-              <img src={CustomersLogoStripImage} alt="Our Customers" />
+              {/* <img src={CustomersLogoStripImage} alt="Our Customers" /> */}
             </CustomersLogoStrip>
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
-              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+              <img
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
+                src={DesignIllustration}
+                alt="Design Illustration"
+              />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
