@@ -8,7 +8,7 @@ import { ReactComponent as SvgDotPattern } from "../../images/dot-pattern.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-7.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-8.svg";
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative px-8`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(

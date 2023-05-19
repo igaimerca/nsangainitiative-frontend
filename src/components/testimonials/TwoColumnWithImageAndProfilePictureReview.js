@@ -28,7 +28,7 @@ const TestimonialImageSlider = tw(Slider)`w-full flex-shrink-0 `;
 const ImageAndControlContainer = tw.div`relative outline-none`;
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`relative bg-center bg-no-repeat bg-cover h-[86vh]`,
+  tw`relative bg-top bg-no-repeat bg-cover h-[84vh]`,
 ]);
 
 const ImageOverlay = styled.div`
@@ -44,11 +44,11 @@ const ControlButton = styled(PrimaryButton)`
 `;
 
 const TextContainer = styled.div((props) => [
-  tw`absolute z-50 flex flex-col items-center justify-center w-[75%] left-[14%] top-[17%] md:top-1/2 lg:w-7/12`,
+  tw`absolute z-50 flex flex-col items-center md:items-start justify-center w-[75%] left-[14%] top-[17%] md:top-[45%] lg:w-8/12`,
   props.textOnLeft ? tw`lg:pr-12 lg:order-first` : tw`lg:pl-12 lg:order-last`,
 ]);
-export const PrimaryLink = styled.button`
-  ${tw`px-8 py-3 font-bold text-gray-100 border-b-0 rounded-md lg:mx-0 bg-primary-500 hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline`}
+export const PrimaryLink = styled.a`
+  ${tw`inline-block px-8 py-3 font-bold text-gray-100 border-b-0 rounded-md lg:mx-0 bg-primary-500 hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline`}
 `;
 
 const Subheading = tw(SubheadingBase)`mb-4 text-red-500`;
@@ -114,10 +114,12 @@ export default ({
                     </Image>
                     <TextContainer textOnLeft={textOnLeft}>
                       <HeadingInfo
-                        tw="flex justify-center items-center flex-col md:block"
+                        tw="flex justify-center items-start flex-col md:block"
                         subheading={testimonial?.subTitle}
                         heading={testimonial.title}
                         description={testimonial.description}
+                        button={testimonial?.button}
+                        link={testimonial?.link}
                       />
                     </TextContainer>
                     <ControlContainer>
@@ -141,11 +143,18 @@ export default ({
   );
 };
 
-const HeadingInfo = ({ subheading, heading, description, ...props }) => (
+const HeadingInfo = ({
+  subheading,
+  heading,
+  description,
+  button,
+  link,
+  ...props
+}) => (
   <div {...props}>
     {subheading ? <Subheading>{subheading}</Subheading> : null}
     <HeadingTitle>{heading}</HeadingTitle>
     <Description>{description}</Description>
-    <PrimaryLink>DONATE NOW</PrimaryLink>
+    {button && <PrimaryLink href={link}>{button}</PrimaryLink>}
   </div>
 );

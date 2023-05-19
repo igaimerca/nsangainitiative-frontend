@@ -8,16 +8,16 @@ import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
-const Container = tw.div`relative bg-nsanga-blue text-gray-100 -mx-8 -mb-8 px-8`;
+const Container = tw.div`relative bg-nsanga-blue text-gray-100 -mx-8 -mb-8 px-16 pb-8 md:pb-0`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`;
-const FiveColumns = tw.div`flex flex-wrap justify-between`;
+const ThreeColumns = tw.div`flex flex-wrap justify-center`;
 
-const Column = tw.div`w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
-const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/5`;
+const Column = tw.div`flex items-center justify-start flex-col w-full md:w-1/3 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
+const CompanyColumn = tw.div`flex items-center justify-start flex-col text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/3`;
 
-const ColumnHeading = tw.h5`font-bold uppercase`;
+const ColumnHeading = tw.h3`w-full text-center font-bold uppercase`;
 
-const LinkList = tw.ul`mt-4 text-sm font-medium`;
+const LinkList = tw.ul`w-full text-center mt-4 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300`;
 
@@ -43,7 +43,7 @@ export default () => {
   return (
     <Container id="footer">
       <Content>
-        <FiveColumns>
+        <ThreeColumns>
           <CompanyColumn>
             <LogoContainer>
               <LogoImg src={LogoImage} />
@@ -89,7 +89,7 @@ export default () => {
               </LinkListItem>
             </LinkList>
           </Column>
-        </FiveColumns>
+        </ThreeColumns>
         <Divider />
         <CopyrightAndCompanyInfoRow>
           <CopyrightNotice>
