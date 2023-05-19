@@ -28,7 +28,7 @@ const TestimonialImageSlider = tw(Slider)`w-full flex-shrink-0 `;
 const ImageAndControlContainer = tw.div`relative outline-none`;
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`relative bg-top bg-no-repeat bg-cover h-[84vh]`,
+  tw`relative bg-top bg-no-repeat bg-cover h-[83vh] md:h-[84vh]`,
 ]);
 
 const ImageOverlay = styled.div`
