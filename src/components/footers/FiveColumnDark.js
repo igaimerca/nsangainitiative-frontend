@@ -86,6 +86,11 @@ export default () => {
                   nsanga@nsangainitiative.org
                 </Link>
               </LinkListItem>
+                            <LinkListItem>
+                <Link href="mailto: nsangainitiative@yahoo.com">
+                   nsangainitiative@yahoo.com
+                </Link>
+              </LinkListItem>
             </LinkList>
           </Column>
         </ThreeColumns>
