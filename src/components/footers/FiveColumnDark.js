@@ -80,9 +80,11 @@ export default () => {
           <Column>
             <ColumnHeading>Contact</ColumnHeading>
             <LinkList>
-              <LinkListItem>(+250) 780-000-000</LinkListItem>
+              <LinkListItem>(+250) 788-302-801</LinkListItem>
               <LinkListItem>
-                <Link href="mailto:example@gmail.com">example@gmail.com</Link>
+                <Link href="mailto:nsanga@nsangainitiative.org">
+                  nsanga@nsangainitiative.org
+                </Link>
               </LinkListItem>
             </LinkList>
           </Column>
